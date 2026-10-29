@@ -1,0 +1,15 @@
+{
+  "itemGroup.dundlecraft": "Example Mod Tab",
+  "block.dundlecraft.example_block": "Example Block",
+  "item.dundlecraft.example_item": "Example Item",
+
+  "dundlecraft.configuration.title": "DundleCraft Configs",
+  "dundlecraft.configuration.section.dundlecraft.common.toml": "DundleCraft Configs",
+  "dundlecraft.configuration.section.dundlecraft.common.toml.title": "DundleCraft Configs",
+  "dundlecraft.configuration.items": "Item List",
+  "dundlecraft.configuration.logDirtBlock": "Log Dirt Block",
+  "dundlecraft.configuration.magicNumberIntroduction": "Magic Number Text",
+  "dundlecraft.configuration.magicNumber": "Magic Number",
+
+  "dundlecraft.truedark.cant_sleep": "You can't sleep."
+}
