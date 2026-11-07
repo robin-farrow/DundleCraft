@@ -7,6 +7,8 @@ import net.minecraft.world.clock.ServerClockManager;
 import net.minecraft.world.clock.WorldClock;
 import net.minecraft.world.clock.WorldClocks;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStoppedEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 public final class DayLengthController
@@ -19,7 +21,7 @@ public final class DayLengthController
     private final MinecraftServer server;
     private final Holder<WorldClock> overworld;
 
-    public DayLengthController (MinecraftServer server)
+    public DayLengthController(MinecraftServer server)
     {
         this.server = server;
         this.overworld = server.registryAccess()
@@ -30,7 +32,10 @@ public final class DayLengthController
     @SubscribeEvent
     public void onServerTick(ServerTickEvent.Post event)
     {
-        if (server.getTickCount() % 10 != 0) return;
+        if (server.getTickCount() % 10 != 0)
+        {
+            return;
+        }
 
         ServerClockManager clocks = server.clockManager();
         long time = clocks.getInstance(overworld).totalTicks() % 24000;
@@ -41,5 +46,11 @@ public final class DayLengthController
         {
             clocks.setRate(overworld, wanted);
         }
+    }
+
+    @SubscribeEvent
+    public void onServerStopped(ServerStoppedEvent event)
+    {
+        NeoForge.EVENT_BUS.unregister(this);
     }
 }

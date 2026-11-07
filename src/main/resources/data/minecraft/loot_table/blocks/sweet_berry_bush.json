@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:block",
+  "modifier": {
+    "type": "minecraft:explosion_decay"
+  },
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:sweet_berries"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "type": "minecraft:match_block",
+                "blocks": "minecraft:sweet_berry_bush",
+                "state": {
+                  "age": "3"
+                }
+              },
+              {
+                "type": "minecraft:random_chance",
+                "chance": 0.25
+              }
+            ]
+          },
+          "name": "minecraft:sweet_berries"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/sweet_berry_bush"
+}

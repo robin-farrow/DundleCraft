@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": "#dundlecraft:wood_and_stripped_wood",
+    "L": "#minecraft:logs",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " S ",
+    "SLS",
+    "WLW"
+  ],
+
+  "result": {
+    "id": "minecraft:campfire"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:all_of",
+            "terms": [
+              {
+                "type": "minecraft:survives_explosion"
+              },
+              {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {}
+              },
+              {
+                "type": "minecraft:random_chance",
+                "chance": 0.33
+              }
+            ]
+          },
+          "name": "minecraft:chorus_flower"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/chorus_flower"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": "minecraft:smooth_stone",
+    "C": "minecraft:gray_concrete",
+    "R": "minecraft:raw_copper_block",
+    "X": "minecraft:furnace"
+  },
+  "pattern": [
+    "CCC",
+    "RXR",
+    "SSS"
+  ],
+  "result": {
+    "id": "minecraft:blast_furnace"
+  }
+}

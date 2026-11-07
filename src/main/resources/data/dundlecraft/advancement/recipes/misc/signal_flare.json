@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gunpowder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [ { "items": "minecraft:gunpowder" } ] }
+    },
+    "has_coal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [ { "items": "#minecraft:coals" } ] }
+    },
+    "has_paper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [ { "items": "minecraft:paper" } ] }
+    }
+  },
+  "requirements": [
+    [ "has_gunpowder" ],
+    [ "has_coal" ],
+    [ "has_paper" ]
+  ],
+  "rewards": {
+    "recipes": [
+      "dundlecraft:signal_flare_white",
+      "dundlecraft:signal_flare_orange",
+      "dundlecraft:signal_flare_magenta",
+      "dundlecraft:signal_flare_light_blue",
+      "dundlecraft:signal_flare_yellow",
+      "dundlecraft:signal_flare_lime",
+      "dundlecraft:signal_flare_pink",
+      "dundlecraft:signal_flare_gray",
+      "dundlecraft:signal_flare_light_gray",
+      "dundlecraft:signal_flare_cyan",
+      "dundlecraft:signal_flare_purple",
+      "dundlecraft:signal_flare_blue",
+      "dundlecraft:signal_flare_brown",
+      "dundlecraft:signal_flare_green",
+      "dundlecraft:signal_flare_red",
+      "dundlecraft:signal_flare_black"
+    ]
+  }
+}

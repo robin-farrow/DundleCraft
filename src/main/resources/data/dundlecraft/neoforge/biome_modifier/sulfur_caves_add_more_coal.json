@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:sulfur_caves",
+  "features": [
+    "dundlecraft:sulfur_ore_coal_trapezoid",
+    "dundlecraft:sulfur_ore_coal_uniform"
+  ],
+  "step": "underground_ores"
+}

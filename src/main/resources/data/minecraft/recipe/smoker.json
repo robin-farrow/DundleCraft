@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": "minecraft:mud_bricks",
+    "X": "minecraft:furnace",
+    "S": "minecraft:smooth_stone"
+  },
+  "pattern": [
+    "MMM",
+    "MXM",
+    "SSS"
+  ],
+  "result": {
+    "id": "minecraft:smoker"
+  }
+}

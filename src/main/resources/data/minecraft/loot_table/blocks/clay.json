@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "condition": "minecraft:tool/can_silk_touch",
+              "name": "minecraft:clay"
+            },
+            {
+              "type": "minecraft:item",
+              "modifier": {
+                  "type": "minecraft:explosion_decay"
+              },
+              "name": "minecraft:clay_ball"
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "condition": {
+            "type": "minecraft:table_bonus",
+            "enchantment": "minecraft:fortune",
+            "chances": [ 0.0, 0.33, 0.66, 1.0 ]
+          },
+          "name": "minecraft:clay_ball"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/clay"
+}

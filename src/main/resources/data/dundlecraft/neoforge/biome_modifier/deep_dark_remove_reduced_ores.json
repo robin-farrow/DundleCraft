@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "minecraft:deep_dark",
+  "features": [
+    "minecraft:ore_coal_lower",
+    "minecraft:ore_coal_upper",
+    "minecraft:ore_copper",
+    "minecraft:ore_diamond",
+    "minecraft:ore_diamond_buried",
+    "minecraft:ore_diamond_large",
+    "minecraft:ore_diamond_medium",
+    "minecraft:ore_iron_middle",
+    "minecraft:ore_iron_small"
+  ],
+  "steps": [ "underground_ores" ]
+}

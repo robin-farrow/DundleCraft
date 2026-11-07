@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "signal_flare",
+  "ingredients": [
+    "minecraft:gunpowder",
+    "minecraft:paper",
+    "#minecraft:coals",
+    "minecraft:blue_dye"
+  ],
+  "result": {
+    "id": "dundlecraft:signal_flare",
+    "components": {
+      "minecraft:firework_explosion": {
+        "shape": "large_ball",
+        "colors": [2437522],
+        "has_twinkle": true },
+      "minecraft:item_name": { 
+        "translate": "item.dundlecraft.signal_flare",
+        "color": "#7179B8",
+        "with": [
+          {
+          "translate": "color.minecraft.blue"
+          }
+        ]
+      },
+      "minecraft:tooltip_display": {
+        "hidden_components": [
+          "minecraft:firework_explosion"
+        ]
+      }
+    }
+  }
+}

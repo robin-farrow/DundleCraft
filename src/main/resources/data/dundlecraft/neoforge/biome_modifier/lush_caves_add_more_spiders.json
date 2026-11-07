@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "minecraft:lush_caves",
+  "spawners": { "type": "minecraft:spider", "count": 4, "weight": 108 }
+}

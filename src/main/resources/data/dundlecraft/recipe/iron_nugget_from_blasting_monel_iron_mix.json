@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": "dundlecraft:monel_iron_mix",
+  "result": {
+    "id": "minecraft:iron_nugget"
+  }
+}

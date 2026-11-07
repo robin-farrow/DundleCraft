@@ -1,0 +1,5 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "minecraft:sulfur_caves",
+  "spawners": { "type": "minecraft:creeper", "count": 2, "weight": 81 }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dundlecraft:item/signal_flare",
+    "layer1": "dundlecraft:item/signal_flare_overlay"
+  }
+}

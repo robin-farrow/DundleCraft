@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block_pile",
+  "state_provider": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": "minecraft:jungle_wood",
+        "weight": 1
+      },
+      {
+        "data": "minecraft:acacia_wood",
+        "weight": 2
+      }
+    ]
+  }
+}

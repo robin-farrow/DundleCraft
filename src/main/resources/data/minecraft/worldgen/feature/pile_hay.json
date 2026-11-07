@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block_pile",
+  "state_provider": {
+    "type": "minecraft:weighted",
+    "entries": [
+      {
+        "data": "minecraft:oak_wood",
+        "weight": 3
+      },
+      {
+        "data": "minecraft:birch_wood",
+        "weight": 1
+      }
+    ]
+  }
+}

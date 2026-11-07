@@ -1,15 +1,9 @@
 {
-  "itemGroup.dundlecraft": "Example Mod Tab",
-  "block.dundlecraft.example_block": "Example Block",
-  "item.dundlecraft.example_item": "Example Item",
+  "dundlecraft.truedark.cant_sleep": "You can't sleep",
+  "dundlecraft.dundlehardcore.chat_disabled": "Chat is disabled - use Voice Chat or Signal Flares.",
+  "dundlecraft.dundlehardcore.commands_disabled": "Commands are decided when world is created.",
 
-  "dundlecraft.configuration.title": "DundleCraft Configs",
-  "dundlecraft.configuration.section.dundlecraft.common.toml": "DundleCraft Configs",
-  "dundlecraft.configuration.section.dundlecraft.common.toml.title": "DundleCraft Configs",
-  "dundlecraft.configuration.items": "Item List",
-  "dundlecraft.configuration.logDirtBlock": "Log Dirt Block",
-  "dundlecraft.configuration.magicNumberIntroduction": "Magic Number Text",
-  "dundlecraft.configuration.magicNumber": "Magic Number",
-
-  "dundlecraft.truedark.cant_sleep": "You can't sleep."
+  "item.dundlecraft.monel_iron_mix": "Monel Iron Mix",
+  "item.dundlecraft.signal_flare": "%s Signal Flare",
+  "item.dundlecraft.stew_of_regeneration": "Stew of Regeneration"
 }

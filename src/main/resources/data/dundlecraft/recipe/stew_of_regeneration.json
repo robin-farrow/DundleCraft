@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:bowl",
+    "minecraft:cooked_beef",
+    "minecraft:cooked_porkchop",
+    "minecraft:cooked_mutton",
+    "minecraft:cooked_rabbit",
+    "minecraft:cooked_chicken",
+    "minecraft:cooked_cod",
+    "minecraft:cooked_salmon",
+    "minecraft:honey_bottle"
+  ],
+  "result": {
+    "id": "dundlecraft:stew_of_regeneration"
+  }
+}

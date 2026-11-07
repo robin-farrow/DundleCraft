@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#minecraft:soul_fire_base_blocks",
+    "W": "#dundlecraft:wood_and_stripped_wood",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " S ",
+    "S#S",
+    "W#W"
+  ],
+  "result": {
+    "id": "minecraft:soul_campfire"
+  }
+}

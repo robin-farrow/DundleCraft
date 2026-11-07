@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:dripstone_caves",
+  "features": [
+    "dundlecraft:dripstone_ore_iron_trapezoid",
+    "dundlecraft:dripstone_ore_iron_uniform"
+  ],
+  "step": "underground_ores"
+}

@@ -1,0 +1,62 @@
+{
+  "required": true,
+  "package": "io.github.robin_farrow.dundlecraft.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "dundlehardcore.EntitySpawnReasonMixin",
+    "dundlehardcore.PhantomAttackPlayerTargetGoalMixin",
+    "dundlehardcore.SpiderAttackGoalMixin",
+    "dundlehardcore.SpiderTargetGoalMixin",
+    "dundlehardcore.WorldOptionsScreenMixin",
+
+    "persistentblocks.AbstractContainerMenuMixin",
+    "persistentblocks.BlockItemMixin",
+    "persistentblocks.DefaultDispenseItemBehaviorMixin",
+    "persistentblocks.DragonEggBlockMixin",
+    "persistentblocks.EntityCollisionContextMixin",
+    "persistentblocks.FallingBlockEntityInvoker",
+    "persistentblocks.FallingBlockEntityMixin",
+    "client.FallingBlockRenderStateMixin",
+    "client.FallingBlockRendererMixin",
+    "persistentblocks.HopperBlockEntityMixin",
+    "persistentblocks.HorseInventoryMenuMixin",
+    "persistentblocks.InventoryMixin",
+    "persistentblocks.ItemEntityMixin",
+    "persistentblocks.ItemStackMixin",
+    "persistentblocks.ItemStackTemplateMixin",
+    "persistentblocks.ResultSlotMixin",
+    "persistentblocks.ShelfBlockMixin",
+    "persistentblocks.SlotMixin",
+
+    "playersoul.EnderDragonFightMixin",
+
+    "rarehealing.FlowerBlockMixin",
+
+    "resourceless.AbstractCookingRecipeMixin",
+    "resourceless.AbstractFurnaceBlockEntityMixin",
+    "resourceless.AnimalMixin",
+    "resourceless.BlastFurnaceBlockEntityMixin",
+    "resourceless.BlastFurnaceMenuMixin",
+    "resourceless.ChickenMixin",
+    "resourceless.FishingHookMixin",
+    "resourceless.FoxBreedGoalMixin",
+    "resourceless.MobLootMixin",
+    "resourceless.PlayerExhaustionMixin",
+    "resourceless.SaplingBlockMixin",
+    "resourceless.SinglePoolElementMixin",
+    "resourceless.TurtleBreedGoalMixin",
+
+    "signalflare.FireworkRocketEntityMixin",
+
+    "truedark.BlockStateBaseMixin",
+    "truedark.CampfireBlockMixin",
+    "truedark.TorchBlockMixin",
+    "truedark.WallTorchBlockMixin"
+  ],
+  "client": [
+    "client.HudMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

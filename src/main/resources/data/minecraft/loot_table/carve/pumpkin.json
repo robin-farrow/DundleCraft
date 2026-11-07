@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:block_interact",
+  "pools": [],
+  "random_sequence": "minecraft:carve/pumpkin"
+}

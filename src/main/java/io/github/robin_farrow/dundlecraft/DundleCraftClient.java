@@ -1,31 +1,59 @@
 package io.github.robin_farrow.dundlecraft;
 
-import net.minecraft.client.Minecraft;
+import io.github.robin_farrow.dundlecraft.client.BurnoutItemDecorator;
+import io.github.robin_farrow.dundlecraft.client.DundleHardcoreClientEvents;
+import io.github.robin_farrow.dundlecraft.client.PersistentItemDecorator;
+import io.github.robin_farrow.dundlecraft.client.ItemTooltips;
+import io.github.robin_farrow.dundlecraft.modules.persistentblocks.PersistentBlocksRules;
+import io.github.robin_farrow.dundlecraft.modules.playersoul.SoulClientHud;
+import io.github.robin_farrow.dundlecraft.modules.truedark.lightburnout.LightBurnout;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
+import net.neoforged.neoforge.client.event.RegisterItemDecorationsEvent;
+import net.neoforged.neoforge.client.gui.VanillaGuiLayers;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.common.tooltip.TooltipLocation;
+import net.neoforged.neoforge.event.RegisterTooltipAppendersEvent;
 
-// This class will not load on dedicated servers. Accessing client side code from here is safe.
 @Mod(value = DundleCraft.MODID, dist = Dist.CLIENT)
-// You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-@EventBusSubscriber(modid = DundleCraft.MODID, value = Dist.CLIENT)
-public class DundleCraftClient {
-    public DundleCraftClient(ModContainer container) {
-        // Allows NeoForge to create a config screen for this mod's configs.
-        // The config screen is accessed by going to the Mods screen > clicking on your mod > clicking on config.
-        // Do not forget to add translations for your config options to the en_us.json file.
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+public class DundleCraftClient
+{
+    public DundleCraftClient(IEventBus modEventBus, ModContainer container)
+    {
+        NeoForge.EVENT_BUS.register(new DundleHardcoreClientEvents());
+
+        modEventBus.addListener((RegisterGuiLayersEvent event) ->
+                event.registerBelow(VanillaGuiLayers.PLAYER_HEALTH, SoulClientHud.LAYER_ID, SoulClientHud::render));
+
+        modEventBus.addListener(this::registerItemDecorators);
+        modEventBus.addListener(this::registerTooltipAppenders);
     }
 
-    @SubscribeEvent
-    static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        DundleCraft.LOGGER.info("HELLO FROM CLIENT SETUP");
-        DundleCraft.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+    // Placed just under each item's own description, above enchantments and the F3 + H item info
+    private void registerTooltipAppenders(RegisterTooltipAppendersEvent event)
+    {
+        event.registerAppender(TooltipLocation.POST_CUSTOM, ItemTooltips::soul);
+        event.registerAppender(TooltipLocation.POST_CUSTOM, ItemTooltips::burnout);
+        event.registerAppender(TooltipLocation.POST_CUSTOM, ItemTooltips::persistent);
+    }
+
+    private void registerItemDecorators(RegisterItemDecorationsEvent event)
+    {
+        PersistentItemDecorator persistent = new PersistentItemDecorator();
+        BurnoutItemDecorator burnout = new BurnoutItemDecorator();
+
+        for (Item item : BuiltInRegistries.ITEM) {
+            if (!(item instanceof BlockItem blockItem)) continue;
+            if (PersistentBlocksRules.isPersistent(blockItem.getBlock()))
+                event.register(item, persistent);
+            if (blockItem.getBlock().defaultBlockState().hasProperty(LightBurnout.BURN))
+                event.register(item, burnout);
+        }
     }
 }

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "minecraft:dripstone_caves",
+  "features": [
+    "minecraft:ore_copper_large"
+  ],
+  "steps": [ "underground_ores" ]
+}

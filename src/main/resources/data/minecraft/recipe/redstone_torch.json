@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "minecraft:redstone",
+    "N": "minecraft:iron_nugget"
+  },
+  "pattern": [
+    " N ",
+    "NXN",
+    " # "
+  ],
+  "result": {
+    "id": "minecraft:redstone_torch"
+  }
+}

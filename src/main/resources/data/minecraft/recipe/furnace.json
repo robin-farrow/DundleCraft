@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "#minecraft:stone_crafting_materials",
+    "B": "minecraft:bricks",
+    "C": "minecraft:charcoal"
+  },
+  "pattern": [
+    "BBB",
+    "BCB",
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:furnace"
+  }
+}

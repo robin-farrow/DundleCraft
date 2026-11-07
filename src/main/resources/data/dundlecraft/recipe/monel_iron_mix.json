@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:raw_iron",
+    "minecraft:raw_iron",
+    "minecraft:raw_copper"
+  ],
+  "result": {
+    "id": "dundlecraft:monel_iron_mix",
+    "count": 2
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 1,
+                "min": 0
+              }
+            }
+          ],
+          "name": "minecraft:feather"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:random_chance_with_enchanted_bonus",
+        "enchantment": "minecraft:looting",
+        "unenchanted_chance": 0.0,
+        "enchanted_chance": {
+          "type": "minecraft:lookup",
+          "values": [0.33, 0.66, 1.0],
+          "fallback": 1.0
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:feather"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": [
+            {
+              "type": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 0,
+                "max": 1
+              }
+            },
+            {
+              "type": "minecraft:furnace_smelt",
+              "condition": {
+                "type": "minecraft:any_of",
+                "terms": [
+                  {
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                      "minecraft:flags": {
+                        "is_on_fire": true
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:entity_properties",
+                    "entity": "direct_attacker",
+                    "predicate": {
+                      "minecraft:equipment": {
+                        "mainhand": {
+                          "predicates": {
+                            "minecraft:enchantments": [
+                              {
+                                "enchantments": "#minecraft:smelts_loot"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "name": "minecraft:chicken"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "condition": {
+        "type": "minecraft:random_chance_with_enchanted_bonus",
+        "enchantment": "minecraft:looting",
+        "unenchanted_chance": 0.0,
+        "enchanted_chance": {
+          "type": "minecraft:lookup",
+          "values": [0.33, 0.66, 1.0],
+          "fallback": 1.0
+        }
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "modifier": {
+            "type": "minecraft:furnace_smelt",
+            "condition": {
+              "type": "minecraft:any_of",
+              "terms": [
+                {
+                  "type": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": { "minecraft:flags": { "is_on_fire": true } }
+                },
+                {
+                  "type": "minecraft:entity_properties",
+                  "entity": "direct_attacker",
+                  "predicate": {
+                    "minecraft:equipment": {
+                      "mainhand": {
+                        "predicates": {
+                          "minecraft:enchantments": [
+                            { "enchantments": "#minecraft:smelts_loot" }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "name": "minecraft:chicken"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:entities/chicken"
+}

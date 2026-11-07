@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:deep_dark",
+  "features": [
+    "dundlecraft:deep_dark_ore_coal_lower",
+    "dundlecraft:deep_dark_ore_copper",
+    "dundlecraft:deep_dark_ore_diamond",
+    "dundlecraft:deep_dark_ore_diamond_buried",
+    "dundlecraft:deep_dark_ore_diamond_large",
+    "dundlecraft:deep_dark_ore_diamond_medium",
+    "dundlecraft:deep_dark_ore_iron_middle",
+    "dundlecraft:deep_dark_ore_iron_small"
+  ],
+  "step": "underground_ores"
+}

@@ -1,11 +1,8 @@
 package io.github.robin_farrow.dundlecraft.core;
 
-import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.bus.api.IEventBus;
 
 public abstract class DundleModule
 {
-    protected final void registerEvents(Object handler)
-    {
-        NeoForge.EVENT_BUS.register(handler);
-    }
+    public abstract void register(IEventBus modEventBus);
 }
